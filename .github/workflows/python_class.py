@@ -1,3 +1,8 @@
+# This Python file uses the following encoding: utf-8
+# 第一行是为了保证汉字被识别，reference https://www.python.org/dev/peps/pep-0263/ 
+# https://docs.python.org/2.4/lib/standard-encodings.html 
+
+
 # Square brackets - Option-5 and Option-6; Curly braces - Option-8 and Option-9
 # vs code shortcuts: https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
 # open terminal cmd+space search ternimal 
@@ -10,11 +15,31 @@
 来源：知乎
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。'''
 
-std1 = { 'name': 'Michael', 'score': 98 }
+# 面向过程
+'''std1 = { 'name': 'Michael', 'score': 98 }
 std2 = { 'name': 'Bob', 'score': 81 }
 std3 = { 'name': 'Tiyao', 'score': 100,}
 
 def print_score(std):
     print ('%s: %s' % (std['name'], std['score']))
 
-print_score(std3)
+print_score(std3)'''
+
+# 面向对象
+class student(object):
+    def __init__(self, name, score, age, color):
+        self.name = name
+        self.score = score
+        self.age = age
+        self.color = color
+    
+    def Print_Score(self):
+        print('%s: %s' % (self.name, self.score))
+
+Stefan = student('Stefan Müller', 95, 23, 'white')
+Bob = student('Bob Dylan', 33, 21, 'black')
+Xiaoming = student ('Xiaoming Liu', 100, 18, 'yellow')
+
+Student_List = [Stefan, Bob, Xiaoming]
+for std in Student_List:
+    std.Print_Score()
