@@ -8,6 +8,6 @@ const char *hello(void)
     if (!ans) return NULL;
     strcpy(ans,"Hello, World!");
 
-    /* string is pointer of the first character */
+    /* string is pointer of the first character */ 
     return  ans;
 }
